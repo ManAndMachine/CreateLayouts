@@ -87,19 +87,15 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ContainsDrawingBorder.dwg" />
-    <None Include="CreateLayouts.pfx" />
-    <None Include="IncuhiveMandM.pfx" />
     <None Include="MandM.pfx" />
     <None Include="PackageContents.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="start.scr">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="VIEWPORT-Block.dwg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="Resources\ContainsDrawingBorder.dwg" />
+    <None Include="Resources\start.scr" />
+    <None Include="Resources\TEST.dwg" />
+    <None Include="Resources\TEST1.dwg" />
+    <None Include="Resources\VIEWPORT-Block.dwg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlockHelperClass.cs" />
@@ -156,16 +152,14 @@
     <Resource Include="PackageContents.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="CreateLayouts.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="CreateLayouts.htm" />
-    <Resource Include="CreateLayouts.ico" />
+    <Content Include="Resources\CreateLayouts.htm" />
+    <Resource Include="Resources\CreateLayouts.ico" />
+    <Resource Include="Resources\CreateLayouts.png" />
+    <Resource Include="Resources\LAYOUTTOOL.png" />
+    <Resource Include="Resources\layouttool.txt" />
     <Resource Include="PackageContents - Copy.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- <PropertyGroup>
    <PostBuildEvent>"C:\Program Files (x86)\Windows Kits\10\App Certification Kit\signtool.exe" sign /tr http://timestamp.digicert.com /td sha256 /fd sha256 /f "$(ProjectDir)MandM.pfx" /p MandMRules "$(TargetPath)" -->
