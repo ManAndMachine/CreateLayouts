@@ -1,2 +1,2 @@
-﻿open 
+﻿open "C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\Resources\TEST1.dwg"
 netload "C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\bin\Debug\CreateLayouts.dll"

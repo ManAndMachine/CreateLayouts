@@ -7,6 +7,6 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartProgram>c:\Program Files\Autodesk\AutoCAD 2023\acad.exe</StartProgram>
     <StartAction>Program</StartAction>
-    <StartArguments>/nologo /b "C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\start.scr"</StartArguments>
+    <StartArguments>/nologo /b "C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\Resources\start.scr"</StartArguments>
   </PropertyGroup>
 </Project>

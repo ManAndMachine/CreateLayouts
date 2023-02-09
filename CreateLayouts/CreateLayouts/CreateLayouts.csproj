@@ -92,7 +92,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Resources\ContainsDrawingBorder.dwg" />
-    <None Include="Resources\start.scr" />
+    <None Include="Resources\start.scr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\TEST.dwg" />
     <None Include="Resources\TEST1.dwg" />
     <None Include="Resources\VIEWPORT-Block.dwg" />
