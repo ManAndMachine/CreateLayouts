@@ -16,3 +16,14 @@ C:\Users\alex.fielder\OneDrive\Documents\GitHub\CreateLayouts\CreateLayouts\Crea
 C:\Users\alex.fielder\OneDrive\Documents\GitHub\CreateLayouts\CreateLayouts\CreateLayouts\bin\Debug\CreateLayouts.dll
 C:\Users\alex.fielder\OneDrive\Documents\GitHub\CreateLayouts\CreateLayouts\CreateLayouts\bin\Debug\CreateLayouts.pdb
 C:\Users\alex.fielder\OneDrive\Documents\GitHub\CreateLayouts\CreateLayouts\CreateLayouts\obj\Debug\CreateLayouts.csproj.CoreCompileInputs.cache
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\bin\Debug\start.scr
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\bin\Debug\CreateLayouts.dll
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\bin\Debug\CreateLayouts.pdb
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\obj\Debug\CreateLayouts.csproj.AssemblyReference.cache
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\obj\Debug\CreateLayouts.g.resources
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\obj\Debug\CreateLayouts.MyCommands.resources
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\obj\Debug\CreateLayouts.csproj.GenerateResource.cache
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\obj\Debug\CreateLayouts.csproj.CoreCompileInputs.cache
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\obj\Debug\CreateLayouts.dll
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\obj\Debug\CreateLayouts.pdb
+C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\bin\Debug\VIEWPORT-Block.dwg

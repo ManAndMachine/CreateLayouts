@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CreateLayouts</RootNamespace>
     <AssemblyName>CreateLayouts</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <FileUpgradeFlags>
@@ -33,6 +33,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,31 +56,28 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>IncuhiveMandM.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>MandM.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AcCoreMgd">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\accoremgd.dll</HintPath>
-    </Reference>
-    <Reference Include="AcDbMgd">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\acdbmgd.dll</HintPath>
-    </Reference>
-    <Reference Include="AcMgd">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2022\acmgd.dll</HintPath>
-    </Reference>
     <!--ACA References Begin-->
     <!--ACA Refences End-->
     <!--AME Referebces Begin-->
     <!--AME Reference End-->
+    <Reference Include="accoremgd">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2023\accoremgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acdbmgd">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2023\acdbmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="acmgd">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files\Autodesk\AutoCAD 2023\acmgd.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
@@ -92,11 +90,16 @@
     <None Include="ContainsDrawingBorder.dwg" />
     <None Include="CreateLayouts.pfx" />
     <None Include="IncuhiveMandM.pfx" />
+    <None Include="MandM.pfx" />
     <None Include="PackageContents.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="start.scr" />
-    <None Include="VIEWPORT-Block.dwg" />
+    <None Include="start.scr">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="VIEWPORT-Block.dwg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlockHelperClass.cs" />
@@ -157,18 +160,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CreateLayouts.htm" />
+    <Resource Include="CreateLayouts.ico" />
     <Resource Include="PackageContents - Copy.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>"C:\Program Files (x86)\Windows Kits\10\App Certification Kit\signtool.exe" sign /tr http://timestamp.digicert.com /td sha256 /fd sha256 /f "$(ProjectDir)$(ProjectName).pfx" /p PenJournalPhoto0 "$(TargetPath)"
-if exist "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\" del /f "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\"
-if not exist "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\Resources\" mkdir "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\Resources\"
-xcopy /y "$(ProjectDir)PackageContents.xml" "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\"
-xcopy "$(TargetDir)*.*" "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\" /Y /R
-xcopy /y "$(ProjectDir)$(projectname).ico" "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\Resources\"
-xcopy /y "$(ProjectDir)$(projectname).htm" "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\Resources\"</PostBuildEvent>
-  </PropertyGroup>
+  <!-- <PropertyGroup>
+   <PostBuildEvent>"C:\Program Files (x86)\Windows Kits\10\App Certification Kit\signtool.exe" sign /tr http://timestamp.digicert.com /td sha256 /fd sha256 /f "$(ProjectDir)MandM.pfx" /p MandMRules "$(TargetPath)" -->
+  <!-- if exist "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\" del /f "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\" -->
+  <!-- if not exist "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\Resources\" mkdir "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\Resources\" -->
+  <!-- xcopy /y "$(ProjectDir)PackageContents.xml" "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\" -->
+  <!-- xcopy "$(TargetDir)*.*" "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\" /Y /R -->
+  <!-- xcopy /y "$(ProjectDir)$(projectname).ico" "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\Resources\" -->
+  <!-- xcopy /y "$(ProjectDir)$(projectname).htm" "%25Allusersprofile%25\Autodesk\ApplicationPlugins\$(projectname).bundle\Contents\Resources\"</PostBuildEvent>
+  </PropertyGroup> -->
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

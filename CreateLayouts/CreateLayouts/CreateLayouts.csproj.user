@@ -5,9 +5,8 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartProgram>c:\Program Files\Autodesk\AutoCAD 2022\acad.exe</StartProgram>
+    <StartProgram>c:\Program Files\Autodesk\AutoCAD 2023\acad.exe</StartProgram>
     <StartAction>Program</StartAction>
-    <StartArguments>
-    </StartArguments>
+    <StartArguments>/nologo /b "C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\start.scr"</StartArguments>
   </PropertyGroup>
 </Project>

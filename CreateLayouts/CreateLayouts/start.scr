@@ -1,1 +1,2 @@
-﻿netload "CreateLayouts.dll"
+﻿open 
+netload "C:\Users\alex.fielder\OneDrive\Documents\GitHub\ManAndMachine\CreateLayouts\CreateLayouts\CreateLayouts\bin\Debug\CreateLayouts.dll"
